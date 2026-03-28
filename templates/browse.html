@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% set root = "" %}
+
+{% block title %}Browse Legislators — Colorado Civic Data{% endblock %}
+
+{% block og_tags %}
+<meta property="og:title" content="Browse Colorado Legislators">
+<meta property="og:description" content="Directory of all Colorado state senators and representatives.">
+<meta property="og:type" content="website">
+{% endblock %}
+
+{% block content %}
+<h1>Colorado Legislators</h1>
+
+<div class="grid" style="grid-template-columns: 1fr auto; align-items: end; gap: 0.5rem; margin-bottom: 1.5rem;">
+  <label for="name-search">
+    Search by name
+    <input
+      type="search"
+      id="name-search"
+      placeholder="e.g. Smith"
+      autocomplete="off"
+    >
+  </label>
+  <label for="chamber-filter">
+    Chamber
+    <select id="chamber-filter">
+      <option value="">All</option>
+      <option value="senate">Senate</option>
+      <option value="house">House</option>
+    </select>
+  </label>
+</div>
+
+<div class="grid" id="legislators-grid">
+  {% for leg in legislators %}
+  <article
+    class="legislator-card"
+    data-name="{{ leg.name | lower }}"
+    data-chamber="{{ leg.chamber | lower }}"
+  >
+    <a href="legislators/{{ leg.id.split('/')[-1] }}.html" style="text-decoration: none; color: inherit;">
+      {% if leg.image %}
+      <img
+        class="legislator-photo"
+        src="{{ leg.image }}"
+        alt="{{ leg.name }}"
+        loading="lazy"
+      >
+      {% else %}
+      <div class="legislator-photo placeholder" aria-hidden="true">
+        {{ leg.given_name[0] if leg.given_name else '' }}{{ leg.family_name[0] if leg.family_name else '' }}
+      </div>
+      {% endif %}
+
+      <p style="margin: 0.5rem 0 0.25rem; font-weight: bold;">{{ leg.name }}</p>
+
+      <p style="margin: 0;">
+        <span class="party-badge {{ leg.party | lower }}">{{ leg.party }}</span>
+      </p>
+
+      <p style="margin: 0.25rem 0 0; font-size: 0.875rem; color: var(--pico-muted-color);">
+        {{ leg.chamber | title }} · District {{ leg.district }}
+      </p>
+    </a>
+  </article>
+  {% else %}
+  <p>No legislators found. Run the sync script to populate data.</p>
+  {% endfor %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ root }}static/browse.js"></script>
+{% endblock %}

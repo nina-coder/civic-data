@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+{% set root = "../" %}
+
+{% block title %}{{ legislator.name }} — Colorado Civic Data{% endblock %}
+
+{% block og_tags %}
+<meta property="og:title" content="{{ legislator.name }}">
+<meta property="og:description" content="{{ legislator.party }} · {{ legislator.chamber | title }} District {{ legislator.district }}{% if legislator.bio %} · {{ legislator.bio[:120] }}{% endif %}">
+<meta property="og:type" content="profile">
+{% if legislator.image %}<meta property="og:image" content="{{ legislator.image }}">{% endif %}
+{% endblock %}
+
+{% block content %}
+{% set leg = legislator %}
+
+<div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+  {% if leg.image %}
+  <img
+    class="legislator-photo"
+    src="{{ leg.image }}"
+    alt="{{ leg.name }}"
+    style="width: 120px; height: 120px;"
+  >
+  {% else %}
+  <div class="legislator-photo placeholder" style="width: 120px; height: 120px; font-size: 2rem;" aria-hidden="true">
+    {{ leg.given_name[0] if leg.given_name else '' }}{{ leg.family_name[0] if leg.family_name else '' }}
+  </div>
+  {% endif %}
+
+  <div>
+    <h1 style="margin-bottom: 0.25rem;">{{ leg.name }}</h1>
+    <p style="margin: 0 0 0.5rem;">
+      <span class="party-badge {{ leg.party | lower }}">{{ leg.party }}</span>
+      &nbsp;{{ leg.chamber | title }} · District {{ leg.district }}
+    </p>
+    {% if leg.bio %}
+    <p style="margin: 0; max-width: 60ch;">{{ leg.bio }}</p>
+    {% endif %}
+  </div>
+</div>
+
+{# Contact #}
+{% set offices = leg.offices if leg.offices else [] %}
+{% if offices %}
+<section>
+  <h2>Contact</h2>
+  <div class="contact-grid">
+    {% for office in offices %}
+    <div>
+      <h3 style="font-size: 1rem; margin-bottom: 0.25rem;">{{ office.name if office.name else 'Office' }}</h3>
+      {% if office.address %}<p style="margin: 0.25rem 0;">{{ office.address }}</p>{% endif %}
+      {% if office.phone %}<p style="margin: 0.25rem 0;"><a href="tel:{{ office.phone }}">{{ office.phone }}</a></p>{% endif %}
+      {% if office.email %}<p style="margin: 0.25rem 0;"><a href="mailto:{{ office.email }}">{{ office.email }}</a></p>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{# Links #}
+{% set social = leg.social if leg.social else {} %}
+{% set links = [] %}
+{% if leg.url %}{% set _ = links.append(('Website', leg.url)) %}{% endif %}
+{% if social.twitter %}{% set _ = links.append(('Twitter / X', 'https://twitter.com/' ~ social.twitter)) %}{% endif %}
+{% if social.facebook %}{% set _ = links.append(('Facebook', 'https://facebook.com/' ~ social.facebook)) %}{% endif %}
+{% if social.instagram %}{% set _ = links.append(('Instagram', 'https://instagram.com/' ~ social.instagram)) %}{% endif %}
+
+{% if links %}
+<section>
+  <h2>Links</h2>
+  <ul>
+    {% for label, href in links %}
+    <li><a href="{{ href }}" target="_blank" rel="noopener">{{ label }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{# Committees #}
+{% set leg_committees = leg.committees if leg.committees else [] %}
+{% if leg_committees %}
+<section>
+  <h2>Committees</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Committee</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for membership in leg_committees %}
+      <tr>
+        <td>
+          {% set comm_name = membership.name if membership.name else membership %}
+          {% set comm_slug = comm_name | lower | replace('&', 'and') | replace(' ', '-') | replace('/', '-') | replace(',', '') | replace('(', '') | replace(')', '') | replace('.', '') | replace("'", '') %}
+          {% for c in committees if c.name == comm_name %}
+          <a href="{{ root }}committees/{{ comm_slug }}.html">{{ comm_name }}</a>
+          {% else %}
+          {{ comm_name }}
+          {% endfor %}
+        </td>
+        <td>{{ membership.role if membership.role else 'Member' }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endif %}
+
+{# Bills Sponsored #}
+{% set sponsored = bills_by_sponsor.get(leg.id, []) %}
+<section>
+  <h2>Bills Sponsored</h2>
+  {% if sponsored %}
+  <label for="bill-search" style="display:block; max-width: 24rem;">
+    Filter bills
+    <input
+      type="search"
+      id="bill-search"
+      placeholder="Search by subject or title…"
+      autocomplete="off"
+    >
+  </label>
+
+  <div style="overflow-x: auto;">
+    <table class="bill-table" id="bills-table">
+      <thead>
+        <tr>
+          <th>Bill ID</th>
+          <th>Session</th>
+          <th>Title</th>
+          <th>Subjects</th>
+          <th>Status</th>
+          <th>Text</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for bill in sponsored | sort(attribute='session', reverse=True) %}
+        <tr data-subjects="{{ (bill.subjects if bill.subjects else []) | join(' ') | lower }}">
+          <td><code>{{ bill.id }}</code></td>
+          <td>{{ bill.session }}</td>
+          <td>{{ bill.title }}</td>
+          <td>
+            {% for subject in (bill.subjects if bill.subjects else []) %}
+            <span class="subject-tag">{{ subject }}</span>
+            {% endfor %}
+          </td>
+          <td>
+            {% set status_lower = (bill.status if bill.status else '') | lower %}
+            {% if 'pass' in status_lower or 'sign' in status_lower %}
+            <span class="vote-passed">{{ bill.status }}</span>
+            {% elif 'fail' in status_lower or 'veto' in status_lower or 'defeat' in status_lower %}
+            <span class="vote-failed">{{ bill.status }}</span>
+            {% else %}
+            {{ bill.status if bill.status else '—' }}
+            {% endif %}
+          </td>
+          <td>
+            {% if bill.text_url %}
+            <a href="{{ bill.text_url }}" target="_blank" rel="noopener">Text</a>
+            {% else %}
+            —
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <p>No sponsored bills on record.</p>
+  {% endif %}
+</section>
+
+<p style="margin-top: 2rem;"><a href="{{ root }}browse.html">← Back to all legislators</a></p>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ root }}static/legislator.js"></script>
+{% endblock %}

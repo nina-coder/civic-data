@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% set root = "../" %}
+
+{% block title %}{{ committee.name }} — Colorado Civic Data{% endblock %}
+
+{% block og_tags %}
+<meta property="og:title" content="{{ committee.name }}">
+<meta property="og:description" content="{{ committee.chamber | title }} committee — Colorado General Assembly.">
+<meta property="og:type" content="website">
+{% endblock %}
+
+{% block content %}
+<h1>{{ committee.name }}</h1>
+<p>
+  <span class="party-badge" style="background: var(--pico-secondary-background); color: var(--pico-secondary-color);">
+    {{ committee.chamber | title }}
+  </span>
+</p>
+
+{% set members = committee.members if committee.members else [] %}
+{% if members %}
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Role</th>
+      <th>Party</th>
+      <th>District</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for member in members %}
+    {% set leg = leg_by_id.get(member.id) %}
+    <tr>
+      <td>
+        {% if leg %}
+        <a href="{{ root }}legislators/{{ leg.id.split('/')[-1] }}.html">{{ member.name if member.name else leg.name }}</a>
+        {% else %}
+        {{ member.name if member.name else member.id }}
+        {% endif %}
+      </td>
+      <td>{{ member.role if member.role else 'Member' }}</td>
+      <td>
+        {% if leg %}
+        <span class="party-badge {{ leg.party | lower }}">{{ leg.party }}</span>
+        {% else %}
+        —
+        {% endif %}
+      </td>
+      <td>
+        {% if leg %}
+        {{ leg.chamber | title }} {{ leg.district }}
+        {% else %}
+        —
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p>No members on record for this committee.</p>
+{% endif %}
+
+<p style="margin-top: 2rem;"><a href="{{ root }}browse.html">← Back to all legislators</a></p>
+{% endblock %}
