@@ -2,7 +2,7 @@
   name: Byron Pelton
   given_name: Byron
   family_name: Pelton
-  party: ''
+  party: Republican
   chamber: senate
   district: 1
   term_start: ''
@@ -27,7 +27,7 @@
   name: Lisa Frizell
   given_name: Lisa
   family_name: Frizell
-  party: ''
+  party: Republican
   chamber: senate
   district: 2
   term_start: ''
@@ -52,7 +52,7 @@
   name: Nick Hinrichsen
   given_name: Nick
   family_name: Hinrichsen
-  party: ''
+  party: Democratic
   chamber: senate
   district: 3
   term_start: ''
@@ -77,7 +77,7 @@
   name: Mark Baisley
   given_name: Mark
   family_name: Baisley
-  party: ''
+  party: Republican
   chamber: senate
   district: 4
   term_start: ''
@@ -102,7 +102,7 @@
   name: Marc Catlin
   given_name: Marc
   family_name: Catlin
-  party: ''
+  party: Republican
   chamber: senate
   district: 5
   term_start: ''
@@ -127,7 +127,7 @@
   name: Cleave Simpson
   given_name: Cleave
   family_name: Simpson
-  party: ''
+  party: Republican
   chamber: senate
   district: 6
   term_start: ''
@@ -152,7 +152,7 @@
   name: Janice Rich
   given_name: Janice
   family_name: Rich
-  party: ''
+  party: Republican
   chamber: senate
   district: 7
   term_start: ''
@@ -177,7 +177,7 @@
   name: Dylan Roberts
   given_name: Dylan
   family_name: Roberts
-  party: ''
+  party: Democratic
   chamber: senate
   district: 8
   term_start: ''
@@ -202,7 +202,7 @@
   name: Lynda Zamora Wilson
   given_name: Lynda
   family_name: Zamora Wilson
-  party: ''
+  party: Republican
   chamber: senate
   district: 9
   term_start: ''
@@ -227,7 +227,7 @@
   name: Larry Liston
   given_name: Larry
   family_name: Liston
-  party: ''
+  party: Republican
   chamber: senate
   district: 10
   term_start: ''
@@ -252,7 +252,7 @@
   name: Tony Exum
   given_name: Tony
   family_name: Exum
-  party: ''
+  party: Democratic
   chamber: senate
   district: 11
   term_start: ''
@@ -277,7 +277,7 @@
   name: Marc Snyder
   given_name: Marc
   family_name: Snyder
-  party: ''
+  party: Democratic
   chamber: senate
   district: 12
   term_start: ''
@@ -302,7 +302,7 @@
   name: Scott Bright
   given_name: Scott
   family_name: Bright
-  party: ''
+  party: Republican
   chamber: senate
   district: 13
   term_start: ''
@@ -327,7 +327,7 @@
   name: Cathy Kipp
   given_name: Cathy
   family_name: Kipp
-  party: ''
+  party: Democratic
   chamber: senate
   district: 14
   term_start: ''
@@ -352,7 +352,7 @@
   name: Janice Marchman
   given_name: Janice
   family_name: Marchman
-  party: ''
+  party: Democratic
   chamber: senate
   district: 15
   term_start: ''
@@ -377,7 +377,7 @@
   name: Chris Kolker
   given_name: Chris
   family_name: Kolker
-  party: ''
+  party: Democratic
   chamber: senate
   district: 16
   term_start: ''
@@ -402,7 +402,7 @@
   name: Katie Wallace
   given_name: Katie
   family_name: Wallace
-  party: ''
+  party: Democratic
   chamber: senate
   district: 17
   term_start: ''
@@ -427,7 +427,7 @@
   name: Judy Amabile
   given_name: Judy
   family_name: Amabile
-  party: ''
+  party: Democratic
   chamber: senate
   district: 18
   term_start: ''
@@ -452,7 +452,7 @@
   name: Lindsey Daugherty
   given_name: Lindsey
   family_name: Daugherty
-  party: ''
+  party: Democratic
   chamber: senate
   district: 19
   term_start: ''
@@ -477,7 +477,7 @@
   name: Lisa Cutter
   given_name: Lisa
   family_name: Cutter
-  party: ''
+  party: Democratic
   chamber: senate
   district: 20
   term_start: ''
@@ -502,7 +502,7 @@
   name: Adrienne Benavidez
   given_name: Adrienne
   family_name: Benavidez
-  party: ''
+  party: Democratic
   chamber: senate
   district: 21
   term_start: ''
@@ -527,7 +527,7 @@
   name: Jessie Danielson
   given_name: Jessie
   family_name: Danielson
-  party: ''
+  party: Democratic
   chamber: senate
   district: 22
   term_start: ''
@@ -552,7 +552,7 @@
   name: Barbara Kirkmeyer
   given_name: Barbara
   family_name: Kirkmeyer
-  party: ''
+  party: Republican
   chamber: senate
   district: 23
   term_start: ''
@@ -577,7 +577,7 @@
   name: Kyle Mullica
   given_name: Kyle
   family_name: Mullica
-  party: ''
+  party: Democratic
   chamber: senate
   district: 24
   term_start: ''
@@ -602,7 +602,7 @@
   name: William Lindstedt
   given_name: William
   family_name: Lindstedt
-  party: ''
+  party: Democratic
   chamber: senate
   district: 25
   term_start: ''
@@ -627,7 +627,7 @@
   name: Jeff Bridges
   given_name: Jeff
   family_name: Bridges
-  party: ''
+  party: Democratic
   chamber: senate
   district: 26
   term_start: ''
@@ -652,7 +652,7 @@
   name: Tom Sullivan
   given_name: Tom
   family_name: Sullivan
-  party: ''
+  party: Democratic
   chamber: senate
   district: 27
   term_start: ''
@@ -677,7 +677,7 @@
   name: Mike Weissman
   given_name: Mike
   family_name: Weissman
-  party: ''
+  party: Democratic
   chamber: senate
   district: 28
   term_start: ''
@@ -702,7 +702,7 @@
   name: Iman Jodeh
   given_name: Iman
   family_name: Jodeh
-  party: ''
+  party: Democratic
   chamber: senate
   district: 29
   term_start: ''
@@ -727,7 +727,7 @@
   name: John Carson
   given_name: John
   family_name: Carson
-  party: ''
+  party: Republican
   chamber: senate
   district: 30
   term_start: ''
@@ -752,7 +752,7 @@
   name: Matt Ball
   given_name: Matt
   family_name: Ball
-  party: ''
+  party: Democratic
   chamber: senate
   district: 31
   term_start: ''
@@ -777,7 +777,7 @@
   name: Robert Rodriguez
   given_name: Robert
   family_name: Rodriguez
-  party: ''
+  party: Democratic
   chamber: senate
   district: 32
   term_start: ''
@@ -802,7 +802,7 @@
   name: James Coleman
   given_name: James
   family_name: Coleman
-  party: ''
+  party: Democratic
   chamber: senate
   district: 33
   term_start: ''
@@ -827,7 +827,7 @@
   name: Julie Gonzales
   given_name: Julie
   family_name: Gonzales
-  party: ''
+  party: Democratic
   chamber: senate
   district: 34
   term_start: ''
@@ -852,7 +852,7 @@
   name: Rod Pelton
   given_name: Rod
   family_name: Pelton
-  party: ''
+  party: Republican
   chamber: senate
   district: 35
   term_start: ''

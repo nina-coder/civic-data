@@ -143,12 +143,12 @@ def _map_person(person: dict, classification: str) -> dict:
     """Map a raw OpenStates person record to our schema."""
     role = person.get("current_role") or {}
 
-    # Party: prefer top-level list, fall back to current_role
-    party_list = person.get("party", [])
-    if party_list and isinstance(party_list, list):
-        party = party_list[0].get("name", "")
+    # Party: string in current API, may be list in older versions
+    raw_party = person.get("party", "")
+    if isinstance(raw_party, list):
+        party = raw_party[0].get("name", "") if raw_party else ""
     else:
-        party = role.get("party", "")
+        party = raw_party or role.get("party", "")
 
     # District as int
     raw_district = role.get("district", "0")

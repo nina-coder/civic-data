@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ava Flanell — Colorado Civic Data</title>
+  <meta name="description" content="Find your state legislators, their committees, and how they vote. Open civic data.">
+  
+<meta property="og:title" content="Ava Flanell">
+<meta property="og:description" content="Republican · House District 14">
+<meta property="og:type" content="profile">
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul>
+        <li><strong><a href="../index.html">Civic Data</a></strong></li>
+      </ul>
+      <ul>
+        <li><a href="../index.html">Look Up</a></li>
+        <li><a href="../browse.html">Browse</a></li>
+        <li>
+          <button class="theme-btn" id="theme-toggle" aria-label="Toggle dark/light mode">
+            <span id="theme-icon">🌙</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    
+
+
+<div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+  
+  <div class="legislator-photo placeholder" style="width: 120px; height: 120px; font-size: 2rem;" aria-hidden="true">
+    AF
+  </div>
+  
+
+  <div>
+    <h1 style="margin-bottom: 0.25rem;">Ava Flanell</h1>
+    <p style="margin: 0 0 0.5rem;">
+      <span class="party-badge republican">Republican</span>
+      &nbsp;House · District 14
+    </p>
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section>
+  <h2>Bills Sponsored</h2>
+  
+  <p>No sponsored bills on record.</p>
+  
+</section>
+
+<p style="margin-top: 2rem;"><a href="../browse.html">← Back to all legislators</a></p>
+
+  </main>
+
+  <footer class="container">
+    <small>
+      Last updated: 2026-03-28T23:04:06Z &nbsp;|&nbsp;
+      Data from <a href="https://openstates.org/" target="_blank" rel="noopener">OpenStates</a>
+      &amp; <a href="https://legiscan.com/" target="_blank" rel="noopener">LegiScan</a>
+      &nbsp;|&nbsp;
+      <a href="https://github.com/nina-coder/civic-data" target="_blank" rel="noopener">GitHub</a>
+    </small>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('theme-toggle');
+      var icon = document.getElementById('theme-icon');
+      var html = document.documentElement;
+
+      function applyTheme(theme) {
+        html.setAttribute('data-theme', theme);
+        icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+      }
+
+      // Apply stored preference on load
+      var stored = localStorage.getItem('theme');
+      if (stored === 'dark' || stored === 'light') {
+        applyTheme(stored);
+      }
+
+      btn.addEventListener('click', function () {
+        var current = html.getAttribute('data-theme');
+        var next = current === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('theme', next);
+        applyTheme(next);
+      });
+    })();
+  </script>
+
+  
+<script src="../static/legislator.js"></script>
+
+</body>
+</html>

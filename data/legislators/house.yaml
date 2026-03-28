@@ -2,7 +2,7 @@
   name: Javier Mabrey
   given_name: Javier
   family_name: Mabrey
-  party: ''
+  party: Democratic
   chamber: house
   district: 1
   term_start: ''
@@ -27,7 +27,7 @@
   name: Steven Woodrow
   given_name: Steven
   family_name: Woodrow
-  party: ''
+  party: Democratic
   chamber: house
   district: 2
   term_start: ''
@@ -52,7 +52,7 @@
   name: Meg Froelich
   given_name: Meg
   family_name: Froelich
-  party: ''
+  party: Democratic
   chamber: house
   district: 3
   term_start: ''
@@ -77,7 +77,7 @@
   name: Cecelia Espenoza
   given_name: Cecelia
   family_name: Espenoza
-  party: ''
+  party: Democratic
   chamber: house
   district: 4
   term_start: ''
@@ -102,7 +102,7 @@
   name: Alex Valdez
   given_name: Alex
   family_name: Valdez
-  party: ''
+  party: Democratic
   chamber: house
   district: 5
   term_start: ''
@@ -127,7 +127,7 @@
   name: Sean Camacho
   given_name: Sean
   family_name: Camacho
-  party: ''
+  party: Democratic
   chamber: house
   district: 6
   term_start: ''
@@ -152,7 +152,7 @@
   name: Jennifer Bacon
   given_name: Jennifer
   family_name: Bacon
-  party: ''
+  party: Democratic
   chamber: house
   district: 7
   term_start: ''
@@ -177,7 +177,7 @@
   name: Lindsay Gilchrist
   given_name: Lindsay
   family_name: Gilchrist
-  party: ''
+  party: Democratic
   chamber: house
   district: 8
   term_start: ''
@@ -202,7 +202,7 @@
   name: Emily Sirota
   given_name: Emily
   family_name: Sirota
-  party: ''
+  party: Democratic
   chamber: house
   district: 9
   term_start: ''
@@ -227,7 +227,7 @@
   name: Junie Joseph
   given_name: Junie
   family_name: Joseph
-  party: ''
+  party: Democratic
   chamber: house
   district: 10
   term_start: ''
@@ -252,7 +252,7 @@
   name: Karen McCormick
   given_name: Karen
   family_name: McCormick
-  party: ''
+  party: Democratic
   chamber: house
   district: 11
   term_start: ''
@@ -277,7 +277,7 @@
   name: Kyle Brown
   given_name: Kyle
   family_name: Brown
-  party: ''
+  party: Democratic
   chamber: house
   district: 12
   term_start: ''
@@ -302,7 +302,7 @@
   name: Julie McCluskie
   given_name: Julie
   family_name: McCluskie
-  party: ''
+  party: Democratic
   chamber: house
   district: 13
   term_start: ''
@@ -327,7 +327,7 @@
   name: Ava Flanell
   given_name: Ava
   family_name: Flanell
-  party: ''
+  party: Republican
   chamber: house
   district: 14
   term_start: ''
@@ -352,7 +352,7 @@
   name: Scott Bottoms
   given_name: Scott
   family_name: Bottoms
-  party: ''
+  party: Republican
   chamber: house
   district: 15
   term_start: ''
@@ -377,7 +377,7 @@
   name: Rebecca Keltie
   given_name: Rebecca
   family_name: Keltie
-  party: ''
+  party: Republican
   chamber: house
   district: 16
   term_start: ''
@@ -402,7 +402,7 @@
   name: Regina English
   given_name: Regina
   family_name: English
-  party: ''
+  party: Democratic
   chamber: house
   district: 17
   term_start: ''
@@ -427,7 +427,7 @@
   name: Amy Paschal
   given_name: Amy
   family_name: Paschal
-  party: ''
+  party: Democratic
   chamber: house
   district: 18
   term_start: ''
@@ -452,7 +452,7 @@
   name: Dan Woog
   given_name: Dan
   family_name: Woog
-  party: ''
+  party: Republican
   chamber: house
   district: 19
   term_start: ''
@@ -477,7 +477,7 @@
   name: Jarvis Caldwell
   given_name: Jarvis
   family_name: Caldwell
-  party: ''
+  party: Republican
   chamber: house
   district: 20
   term_start: ''
@@ -502,7 +502,7 @@
   name: Mary Bradfield
   given_name: Mary
   family_name: Bradfield
-  party: ''
+  party: Republican
   chamber: house
   district: 21
   term_start: ''
@@ -527,7 +527,7 @@
   name: Ken DeGraaf
   given_name: Ken
   family_name: DeGraaf
-  party: ''
+  party: Republican
   chamber: house
   district: 22
   term_start: ''
@@ -552,7 +552,7 @@
   name: Monica Duran
   given_name: Monica
   family_name: Duran
-  party: ''
+  party: Democratic
   chamber: house
   district: 23
   term_start: ''
@@ -577,7 +577,7 @@
   name: Lisa Feret
   given_name: Lisa
   family_name: Feret
-  party: ''
+  party: Democratic
   chamber: house
   district: 24
   term_start: ''
@@ -602,7 +602,7 @@
   name: Tammy Story
   given_name: Tammy
   family_name: Story
-  party: ''
+  party: Democratic
   chamber: house
   district: 25
   term_start: ''
@@ -627,7 +627,7 @@
   name: Meghan Lukens
   given_name: Meghan
   family_name: Lukens
-  party: ''
+  party: Democratic
   chamber: house
   district: 26
   term_start: ''
@@ -652,7 +652,7 @@
   name: Brianna Titone
   given_name: Brianna
   family_name: Titone
-  party: ''
+  party: Democratic
   chamber: house
   district: 27
   term_start: ''
@@ -677,7 +677,7 @@
   name: Sheila Lieder
   given_name: Sheila
   family_name: Lieder
-  party: ''
+  party: Democratic
   chamber: house
   district: 28
   term_start: ''
@@ -702,7 +702,7 @@
   name: Lori Goldstein
   given_name: Lori
   family_name: Goldstein
-  party: ''
+  party: Democratic
   chamber: house
   district: 29
   term_start: ''
@@ -727,7 +727,7 @@
   name: Rebekah Stewart
   given_name: Rebekah
   family_name: Stewart
-  party: ''
+  party: Democratic
   chamber: house
   district: 30
   term_start: ''
@@ -752,7 +752,7 @@
   name: Jacque Phillips
   given_name: Jacque
   family_name: Phillips
-  party: ''
+  party: Democratic
   chamber: house
   district: 31
   term_start: ''
@@ -777,7 +777,7 @@
   name: Manny Rutinel
   given_name: Manny
   family_name: Rutinel
-  party: ''
+  party: Democratic
   chamber: house
   district: 32
   term_start: ''
@@ -802,7 +802,7 @@
   name: Kenny Nguyen
   given_name: Kenny
   family_name: Nguyen
-  party: ''
+  party: Democratic
   chamber: house
   district: 33
   term_start: ''
@@ -827,7 +827,7 @@
   name: Jenny Willford
   given_name: Jenny
   family_name: Willford
-  party: ''
+  party: Democratic
   chamber: house
   district: 34
   term_start: ''
@@ -852,7 +852,7 @@
   name: Lorena García
   given_name: Lorena
   family_name: García
-  party: ''
+  party: Democratic
   chamber: house
   district: 35
   term_start: ''
@@ -877,7 +877,7 @@
   name: Michael Carter
   given_name: Michael
   family_name: Carter
-  party: ''
+  party: Democratic
   chamber: house
   district: 36
   term_start: ''
@@ -902,7 +902,7 @@
   name: Chad Clifford
   given_name: Chad
   family_name: Clifford
-  party: ''
+  party: Democratic
   chamber: house
   district: 37
   term_start: ''
@@ -927,7 +927,7 @@
   name: Gretchen Rydin
   given_name: Gretchen
   family_name: Rydin
-  party: ''
+  party: Democratic
   chamber: house
   district: 38
   term_start: ''
@@ -952,7 +952,7 @@
   name: Brandi Bradley
   given_name: Brandi
   family_name: Bradley
-  party: ''
+  party: Republican
   chamber: house
   district: 39
   term_start: ''
@@ -977,7 +977,7 @@
   name: Naquetta Ricks
   given_name: Naquetta
   family_name: Ricks
-  party: ''
+  party: Democratic
   chamber: house
   district: 40
   term_start: ''
@@ -1002,7 +1002,7 @@
   name: Jamie Jackson
   given_name: Jamie
   family_name: Jackson
-  party: ''
+  party: Democratic
   chamber: house
   district: 41
   term_start: ''
@@ -1027,7 +1027,7 @@
   name: Mandy Lindsay
   given_name: Mandy
   family_name: Lindsay
-  party: ''
+  party: Democratic
   chamber: house
   district: 42
   term_start: ''
@@ -1052,7 +1052,7 @@
   name: Bob Marshall
   given_name: Bob
   family_name: Marshall
-  party: ''
+  party: Democratic
   chamber: house
   district: 43
   term_start: ''
@@ -1077,7 +1077,7 @@
   name: Tony Hartsook
   given_name: Tony
   family_name: Hartsook
-  party: ''
+  party: Republican
   chamber: house
   district: 44
   term_start: ''
@@ -1102,7 +1102,7 @@
   name: Max Brooks
   given_name: Max
   family_name: Brooks
-  party: ''
+  party: Republican
   chamber: house
   district: 45
   term_start: ''
@@ -1127,7 +1127,7 @@
   name: Tisha Mauro
   given_name: Tisha
   family_name: Mauro
-  party: ''
+  party: Democratic
   chamber: house
   district: 46
   term_start: ''
@@ -1152,7 +1152,7 @@
   name: Ty Winter
   given_name: Ty
   family_name: Winter
-  party: ''
+  party: Republican
   chamber: house
   district: 47
   term_start: ''
@@ -1177,7 +1177,7 @@
   name: Carlos Barron
   given_name: Carlos
   family_name: Barron
-  party: ''
+  party: Republican
   chamber: house
   district: 48
   term_start: ''
@@ -1202,7 +1202,7 @@
   name: Lesley Smith
   given_name: Lesley
   family_name: Smith
-  party: ''
+  party: Democratic
   chamber: house
   district: 49
   term_start: ''
@@ -1227,7 +1227,7 @@
   name: Ryan Gonzalez
   given_name: Ryan
   family_name: Gonzalez
-  party: ''
+  party: Republican
   chamber: house
   district: 50
   term_start: ''
@@ -1252,7 +1252,7 @@
   name: Ron Weinberg
   given_name: Ron
   family_name: Weinberg
-  party: ''
+  party: Republican
   chamber: house
   district: 51
   term_start: ''
@@ -1277,7 +1277,7 @@
   name: Yara Zokaie
   given_name: Yara
   family_name: Zokaie
-  party: ''
+  party: Democratic
   chamber: house
   district: 52
   term_start: ''
@@ -1302,7 +1302,7 @@
   name: Andy Boesenecker
   given_name: Andy
   family_name: Boesenecker
-  party: ''
+  party: Democratic
   chamber: house
   district: 53
   term_start: ''
@@ -1327,7 +1327,7 @@
   name: Matt Soper
   given_name: Matt
   family_name: Soper
-  party: ''
+  party: Republican
   chamber: house
   district: 54
   term_start: ''
@@ -1352,7 +1352,7 @@
   name: Rick Taggart
   given_name: Rick
   family_name: Taggart
-  party: ''
+  party: Republican
   chamber: house
   district: 55
   term_start: ''
@@ -1377,7 +1377,7 @@
   name: Chris Richardson
   given_name: Chris
   family_name: Richardson
-  party: ''
+  party: Republican
   chamber: house
   district: 56
   term_start: ''
@@ -1402,7 +1402,7 @@
   name: Elizabeth Velasco
   given_name: Elizabeth
   family_name: Velasco
-  party: ''
+  party: Democratic
   chamber: house
   district: 57
   term_start: ''
@@ -1427,7 +1427,7 @@
   name: Larry Suckla
   given_name: Larry
   family_name: Suckla
-  party: ''
+  party: Republican
   chamber: house
   district: 58
   term_start: ''
@@ -1452,7 +1452,7 @@
   name: Katie Stewart
   given_name: Katie
   family_name: Stewart
-  party: ''
+  party: Democratic
   chamber: house
   district: 59
   term_start: ''
@@ -1477,7 +1477,7 @@
   name: Stephanie Luck
   given_name: Stephanie
   family_name: Luck
-  party: ''
+  party: Republican
   chamber: house
   district: 60
   term_start: ''
@@ -1502,7 +1502,7 @@
   name: Eliza Hamrick
   given_name: Eliza
   family_name: Hamrick
-  party: ''
+  party: Democratic
   chamber: house
   district: 61
   term_start: ''
@@ -1527,7 +1527,7 @@
   name: Matt Martinez
   given_name: Matt
   family_name: Martinez
-  party: ''
+  party: Democratic
   chamber: house
   district: 62
   term_start: ''
@@ -1552,7 +1552,7 @@
   name: Dusty Johnson
   given_name: Dusty
   family_name: Johnson
-  party: ''
+  party: Republican
   chamber: house
   district: 63
   term_start: ''
@@ -1577,7 +1577,7 @@
   name: Scott Slaugh
   given_name: Scott
   family_name: Slaugh
-  party: ''
+  party: Republican
   chamber: house
   district: 64
   term_start: ''
@@ -1602,7 +1602,7 @@
   name: Lori Garcia Sander
   given_name: Lori
   family_name: Garcia Sander
-  party: ''
+  party: Republican
   chamber: house
   district: 65
   term_start: ''
