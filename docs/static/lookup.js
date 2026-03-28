@@ -11,7 +11,7 @@
 
   if (!form) return;
 
-  // --- Geocoding via the US Census Geocoder (JSONP to bypass CORS) ---
+  // --- JSONP geocoding (Census Geocoder doesn't support CORS) ---
   var _jsonpCounter = 0;
   function geocodeAddress(address) {
     return new Promise(function (resolve, reject) {
@@ -53,22 +53,23 @@
     });
   }
 
-  // --- Load a GeoJSON file ---
-  function loadGeoJSON(url) {
+  // --- Load JSON/GeoJSON files ---
+  function loadJSON(url) {
     return fetch(url).then(function (res) {
-      if (!res.ok) throw new Error('Could not load district boundaries.');
+      if (!res.ok) throw new Error('Could not load ' + url);
       return res.json();
     });
   }
 
-  // --- Find which feature (if any) contains the point ---
-  function findDistrict(geojson, lng, lat) {
+  // --- Find which district polygon contains the point ---
+  function findDistrictNumber(geojson, lng, lat, propKey) {
     var pt = turf.point([lng, lat]);
     for (var i = 0; i < geojson.features.length; i++) {
       var feature = geojson.features[i];
       try {
         if (turf.booleanPointInPolygon(pt, feature)) {
-          return feature.properties;
+          var raw = feature.properties[propKey] || feature.properties.NAME || '';
+          return parseInt(raw, 10);
         }
       } catch (e) {
         // skip invalid geometries
@@ -77,33 +78,93 @@
     return null;
   }
 
-  // --- Build a result card using safe DOM methods ---
-  function buildCard(label, props) {
+  // --- Find legislator by chamber and district ---
+  function findLegislator(legislators, chamber, district) {
+    for (var i = 0; i < legislators.length; i++) {
+      if (legislators[i].chamber === chamber && legislators[i].district === district) {
+        return legislators[i];
+      }
+    }
+    return null;
+  }
+
+  // --- Build a legislator card using safe DOM methods ---
+  function buildLegislatorCard(leg, chamberLabel) {
     var article = document.createElement('article');
+    article.className = 'legislator-card';
 
-    var title = document.createElement('h3');
-    title.textContent = label;
-    article.appendChild(title);
-
-    if (props) {
-      Object.keys(props).forEach(function (key) {
-        var p = document.createElement('p');
-        p.style.margin = '0.25rem 0';
-        var strong = document.createElement('strong');
-        strong.textContent = key + ': ';
-        p.appendChild(strong);
-        p.appendChild(document.createTextNode(String(props[key])));
-        article.appendChild(p);
-      });
+    // Header with photo
+    var header = document.createElement('header');
+    if (leg.photo_url) {
+      var img = document.createElement('img');
+      img.src = leg.photo_url;
+      img.alt = 'Photo of ' + leg.name;
+      img.className = 'legislator-photo';
+      header.appendChild(img);
     } else {
-      var p = document.createElement('p');
-      p.textContent = 'No district found for this address.';
-      article.appendChild(p);
+      var placeholder = document.createElement('div');
+      placeholder.className = 'legislator-photo placeholder';
+      placeholder.textContent = (leg.given_name || '?').charAt(0) + (leg.family_name || '').charAt(0);
+      header.appendChild(placeholder);
+    }
+    article.appendChild(header);
+
+    // Name as link to detail page
+    var h3 = document.createElement('h3');
+    var link = document.createElement('a');
+    var slug = leg.id.split('/').pop();
+    link.href = 'legislators/' + slug + '.html';
+    link.textContent = leg.name;
+    h3.appendChild(link);
+    article.appendChild(h3);
+
+    // Party badge + district
+    var info = document.createElement('p');
+    var badge = document.createElement('span');
+    badge.className = 'party-badge ' + (leg.party || '').toLowerCase();
+    badge.textContent = (leg.party || '?').charAt(0);
+    info.appendChild(badge);
+    info.appendChild(document.createTextNode(' ' + chamberLabel + ' District ' + leg.district));
+    article.appendChild(info);
+
+    // Email if available
+    if (leg.email) {
+      var emailP = document.createElement('p');
+      var emailLink = document.createElement('a');
+      emailLink.href = 'mailto:' + leg.email;
+      emailLink.textContent = leg.email;
+      emailP.appendChild(emailLink);
+      article.appendChild(emailP);
+    }
+
+    // Website link
+    if (leg.website) {
+      var siteP = document.createElement('p');
+      var siteLink = document.createElement('a');
+      siteLink.href = leg.website;
+      siteLink.textContent = 'Official Page';
+      siteLink.target = '_blank';
+      siteLink.rel = 'noopener';
+      siteP.appendChild(siteLink);
+      article.appendChild(siteP);
     }
 
     return article;
   }
 
+  // --- Build a "not found" card ---
+  function buildNotFoundCard(chamberLabel) {
+    var article = document.createElement('article');
+    var h3 = document.createElement('h3');
+    h3.textContent = chamberLabel;
+    article.appendChild(h3);
+    var p = document.createElement('p');
+    p.textContent = 'No matching legislator found for this district.';
+    article.appendChild(p);
+    return article;
+  }
+
+  // --- UI helpers ---
   function showError(msg) {
     errorDiv.textContent = msg;
     errorDiv.removeAttribute('hidden');
@@ -114,12 +175,12 @@
     errorDiv.textContent = '';
     loadingDiv.setAttribute('hidden', '');
     resultsDiv.setAttribute('hidden', '');
-    // Clear previous cards safely
     while (cardsDiv.firstChild) {
       cardsDiv.removeChild(cardsDiv.firstChild);
     }
   }
 
+  // --- Form submission ---
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -130,26 +191,45 @@
     clearUI();
     loadingDiv.removeAttribute('hidden');
 
-    geocodeAddress(address)
-      .then(function (coords) {
-        return Promise.all([
-          loadGeoJSON('data/senate.geojson'),
-          loadGeoJSON('data/house.geojson'),
-          Promise.resolve(coords),
-        ]);
-      })
+    // Load all data in parallel, then geocode
+    Promise.all([
+      loadJSON('data/senate.geojson'),
+      loadJSON('data/house.geojson'),
+      loadJSON('data/legislators.json'),
+      geocodeAddress(address),
+    ])
       .then(function (results) {
         var senateGeo = results[0];
         var houseGeo = results[1];
-        var coords = results[2];
+        var legislators = results[2];
+        var coords = results[3];
 
         loadingDiv.setAttribute('hidden', '');
 
-        var senateProps = findDistrict(senateGeo, coords.lng, coords.lat);
-        var houseProps = findDistrict(houseGeo, coords.lng, coords.lat);
+        // Find district numbers
+        var senateDistrict = findDistrictNumber(senateGeo, coords.lng, coords.lat, 'SLDUST');
+        var houseDistrict = findDistrictNumber(houseGeo, coords.lng, coords.lat, 'SLDLST');
 
-        cardsDiv.appendChild(buildCard('State Senate', senateProps));
-        cardsDiv.appendChild(buildCard('State House', houseProps));
+        // Find legislators
+        var senator = senateDistrict ? findLegislator(legislators, 'senate', senateDistrict) : null;
+        var rep = houseDistrict ? findLegislator(legislators, 'house', houseDistrict) : null;
+
+        if (!senator && !rep) {
+          showError("We found your address but couldn't match it to a legislative district. This may be a boundary data issue.");
+          return;
+        }
+
+        if (senator) {
+          cardsDiv.appendChild(buildLegislatorCard(senator, 'Senate'));
+        } else {
+          cardsDiv.appendChild(buildNotFoundCard('State Senate'));
+        }
+
+        if (rep) {
+          cardsDiv.appendChild(buildLegislatorCard(rep, 'House'));
+        } else {
+          cardsDiv.appendChild(buildNotFoundCard('State House'));
+        }
 
         resultsDiv.removeAttribute('hidden');
       })
