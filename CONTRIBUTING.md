@@ -37,7 +37,7 @@ If the error is in how this repo processed or transformed the data, open a PR wi
 
 ## Reporting Issues
 
-Use [GitHub Issues](https://github.com/nina-coder/colorado-civic-data/issues) to report:
+Use [GitHub Issues](https://github.com/nina-coder/civic-data/issues) to report:
 
 - **Data errors** — wrong legislator info, missing votes, stale committee assignments
 - **Site bugs** — broken address lookup, display errors, mobile layout issues

@@ -1,14 +1,14 @@
-# Colorado Civic Data
+# Civic Data
 
-Find your Colorado state legislators, see their committees, and track how they vote.
+Find your state legislators, see their committees, and track how they vote.
 
-**Live site:** [nina-coder.github.io/colorado-civic-data](https://nina-coder.github.io/colorado-civic-data)
+**Live site:** [nina-coder.github.io/civic-data](https://nina-coder.github.io/civic-data)
 
 ---
 
 ## What This Is
 
-A structured, open dataset of the Colorado General Assembly — updated each session — plus a static site that lets anyone look up their legislators by address.
+Structured, open data on state legislatures — starting with Colorado — plus a static site that lets anyone look up their legislators by address. Designed to scale to all 50 states.
 
 The data includes:
 
@@ -26,8 +26,8 @@ All data files are in YAML and GeoJSON, easy to read and import.
 Clone the repo and explore the YAML files directly:
 
 ```bash
-git clone https://github.com/nina-coder/colorado-civic-data.git
-cd colorado-civic-data
+git clone https://github.com/nina-coder/civic-data.git
+cd civic-data
 ```
 
 Legislators are in `data/legislators/`, one file per chamber:
