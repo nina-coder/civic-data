@@ -114,8 +114,8 @@
     geocodeAddress(address)
       .then(function (coords) {
         return Promise.all([
-          loadGeoJSON('data/senate_districts.geojson'),
-          loadGeoJSON('data/house_districts.geojson'),
+          loadGeoJSON('data/senate.geojson'),
+          loadGeoJSON('data/house.geojson'),
           Promise.resolve(coords),
         ]);
       })
