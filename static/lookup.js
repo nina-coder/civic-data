@@ -11,27 +11,46 @@
 
   if (!form) return;
 
-  // --- Geocoding via the US Census Geocoder (free, no key required) ---
+  // --- Geocoding via the US Census Geocoder (JSONP to bypass CORS) ---
+  var _jsonpCounter = 0;
   function geocodeAddress(address) {
-    var url = 'https://geocoding.geo.census.gov/geocoder/locations/onelineaddress'
-      + '?address=' + encodeURIComponent(address)
-      + '&benchmark=Public_AR_Current&format=json';
+    return new Promise(function (resolve, reject) {
+      var callbackName = '_censusGeocodeCallback' + (_jsonpCounter++);
+      var timeout = setTimeout(function () {
+        cleanup();
+        reject(new Error('Address lookup timed out. Please try again.'));
+      }, 10000);
 
-    return fetch(url)
-      .then(function (res) {
-        if (!res.ok) throw new Error('Geocoder request failed.');
-        return res.json();
-      })
-      .then(function (data) {
-        var matches = data
-          && data.result
-          && data.result.addressMatches;
+      function cleanup() {
+        clearTimeout(timeout);
+        delete window[callbackName];
+        var script = document.getElementById(callbackName);
+        if (script) script.parentNode.removeChild(script);
+      }
+
+      window[callbackName] = function (data) {
+        cleanup();
+        var matches = data && data.result && data.result.addressMatches;
         if (!matches || matches.length === 0) {
-          throw new Error('Address not found. Please check the address and try again.');
+          reject(new Error("We couldn't find that address. Try including the city and state (e.g., '123 Main St, Denver, CO 80203')."));
+          return;
         }
-        var coords = matches[0].coordinates;
-        return { lng: coords.x, lat: coords.y };
-      });
+        var match = matches[0];
+        var state = match.addressComponents && match.addressComponents.state;
+        if (state && state !== 'CO') {
+          reject(new Error('This tool covers Colorado. The address you entered appears to be in ' + state + '.'));
+          return;
+        }
+        resolve({ lng: match.coordinates.x, lat: match.coordinates.y });
+      };
+
+      var script = document.createElement('script');
+      script.id = callbackName;
+      script.src = 'https://geocoding.geo.census.gov/geocoder/locations/onelineaddress'
+        + '?address=' + encodeURIComponent(address)
+        + '&benchmark=Public_AR_Current&format=jsonp&callback=' + callbackName;
+      document.head.appendChild(script);
+    });
   }
 
   // --- Load a GeoJSON file ---
