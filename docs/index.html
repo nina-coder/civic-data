@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Your Colorado Representatives — Colorado Civic Data</title>
+  <meta name="description" content="Colorado legislators, committees, and bills — open civic data.">
+  
+<meta property="og:title" content="Find Your Colorado Representatives">
+<meta property="og:description" content="Enter your address to find your Colorado state legislators.">
+<meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul>
+        <li><strong><a href="index.html">Colorado Civic Data</a></strong></li>
+      </ul>
+      <ul>
+        <li><a href="index.html">Look Up</a></li>
+        <li><a href="browse.html">Browse</a></li>
+        <li>
+          <button class="theme-btn" id="theme-toggle" aria-label="Toggle dark/light mode">
+            <span id="theme-icon">🌙</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    
+<h1>Find Your Colorado Representatives</h1>
+<p>Enter your Colorado address to see your state senator and representative.</p>
+
+<form id="lookup-form" role="search">
+  <div class="grid" style="grid-template-columns: 1fr auto; align-items: end; gap: 0.5rem;">
+    <label for="address-input">
+      Address
+      <input
+        type="text"
+        id="address-input"
+        name="address"
+        placeholder="e.g. 200 E Colfax Ave, Denver, CO"
+        autocomplete="street-address"
+        required
+      >
+    </label>
+    <button type="submit">Look Up</button>
+  </div>
+</form>
+
+<div id="lookup-error" class="error-message" hidden></div>
+
+<div id="lookup-loading" hidden>
+  <p aria-live="polite">Looking up your districts…</p>
+</div>
+
+<div id="lookup-results" hidden>
+  <h2>Your Representatives</h2>
+  <div id="results-cards" class="grid"></div>
+</div>
+
+<details style="margin-top: 2rem;">
+  <summary>Or browse by district</summary>
+  <p style="margin-top: 0.75rem;">
+    <a href="browse.html">Browse all legislators →</a>
+  </p>
+</details>
+
+  </main>
+
+  <footer class="container">
+    <small>
+      Last updated: 2026-03-28T20:59:27Z &nbsp;|&nbsp;
+      Data from <a href="https://openstates.org/" target="_blank" rel="noopener">OpenStates</a>
+      &amp; <a href="https://legiscan.com/" target="_blank" rel="noopener">LegiScan</a>
+      &nbsp;|&nbsp;
+      <a href="https://github.com/nrive/colorado-civic-data" target="_blank" rel="noopener">GitHub</a>
+    </small>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('theme-toggle');
+      var icon = document.getElementById('theme-icon');
+      var html = document.documentElement;
+
+      function applyTheme(theme) {
+        html.setAttribute('data-theme', theme);
+        icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+      }
+
+      // Apply stored preference on load
+      var stored = localStorage.getItem('theme');
+      if (stored === 'dark' || stored === 'light') {
+        applyTheme(stored);
+      }
+
+      btn.addEventListener('click', function () {
+        var current = html.getAttribute('data-theme');
+        var next = current === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('theme', next);
+        applyTheme(next);
+      });
+    })();
+  </script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+<script src="static/lookup.js"></script>
+
+</body>
+</html>

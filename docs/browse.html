@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Legislators — Colorado Civic Data</title>
+  <meta name="description" content="Colorado legislators, committees, and bills — open civic data.">
+  
+<meta property="og:title" content="Browse Colorado Legislators">
+<meta property="og:description" content="Directory of all Colorado state senators and representatives.">
+<meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul>
+        <li><strong><a href="index.html">Colorado Civic Data</a></strong></li>
+      </ul>
+      <ul>
+        <li><a href="index.html">Look Up</a></li>
+        <li><a href="browse.html">Browse</a></li>
+        <li>
+          <button class="theme-btn" id="theme-toggle" aria-label="Toggle dark/light mode">
+            <span id="theme-icon">🌙</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    
+<h1>Colorado Legislators</h1>
+
+<div class="grid" style="grid-template-columns: 1fr auto; align-items: end; gap: 0.5rem; margin-bottom: 1.5rem;">
+  <label for="name-search">
+    Search by name
+    <input
+      type="search"
+      id="name-search"
+      placeholder="e.g. Smith"
+      autocomplete="off"
+    >
+  </label>
+  <label for="chamber-filter">
+    Chamber
+    <select id="chamber-filter">
+      <option value="">All</option>
+      <option value="senate">Senate</option>
+      <option value="house">House</option>
+    </select>
+  </label>
+</div>
+
+<div class="grid" id="legislators-grid">
+  
+  <p>No legislators found. Run the sync script to populate data.</p>
+  
+</div>
+
+  </main>
+
+  <footer class="container">
+    <small>
+      Last updated: 2026-03-28T20:59:27Z &nbsp;|&nbsp;
+      Data from <a href="https://openstates.org/" target="_blank" rel="noopener">OpenStates</a>
+      &amp; <a href="https://legiscan.com/" target="_blank" rel="noopener">LegiScan</a>
+      &nbsp;|&nbsp;
+      <a href="https://github.com/nrive/colorado-civic-data" target="_blank" rel="noopener">GitHub</a>
+    </small>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('theme-toggle');
+      var icon = document.getElementById('theme-icon');
+      var html = document.documentElement;
+
+      function applyTheme(theme) {
+        html.setAttribute('data-theme', theme);
+        icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+      }
+
+      // Apply stored preference on load
+      var stored = localStorage.getItem('theme');
+      if (stored === 'dark' || stored === 'light') {
+        applyTheme(stored);
+      }
+
+      btn.addEventListener('click', function () {
+        var current = html.getAttribute('data-theme');
+        var next = current === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('theme', next);
+        applyTheme(next);
+      });
+    })();
+  </script>
+
+  
+<script src="static/browse.js"></script>
+
+</body>
+</html>

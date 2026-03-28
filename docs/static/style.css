@@ -1,0 +1,150 @@
+/* ============================================================
+   Colorado Civic Data — custom overrides on Pico.css
+   ============================================================ */
+
+/* --- Legislator photo --- */
+.legislator-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.legislator-photo.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--pico-secondary-background);
+  color: var(--pico-secondary-inverse);
+  font-weight: bold;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  user-select: none;
+}
+
+/* --- Party badges --- */
+.party-badge {
+  display: inline-block;
+  padding: 0.15em 0.55em;
+  border-radius: 999px;
+  font-size: 0.8em;
+  font-weight: bold;
+  line-height: 1.4;
+  white-space: nowrap;
+  color: #fff;
+  background: var(--pico-muted-border-color);
+}
+
+.party-badge.democratic {
+  background: #2563eb;
+}
+
+.party-badge.republican {
+  background: #dc2626;
+}
+
+.party-badge.independent {
+  background: #6b7280;
+}
+
+/* --- Error messages --- */
+.error-message {
+  color: #dc2626;
+  border: 1px solid #dc2626;
+  border-radius: var(--pico-border-radius);
+  padding: 0.75rem 1rem;
+  margin-top: 1rem;
+}
+
+/* --- Legislator grid (browse page) --- */
+#legislators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.legislator-card {
+  text-align: center;
+  padding: 1.25rem 1rem;
+}
+
+/* --- Theme toggle button --- */
+.theme-btn {
+  background: none;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: inherit;
+}
+
+.theme-btn:focus-visible {
+  outline: 2px solid var(--pico-primary);
+  outline-offset: 2px;
+}
+
+/* --- Bill table --- */
+.bill-table {
+  font-size: 0.875rem;
+  width: 100%;
+}
+
+.bill-table th,
+.bill-table td {
+  padding: 0.4rem 0.6rem;
+  vertical-align: top;
+}
+
+.subject-tag {
+  display: inline-block;
+  background: var(--pico-secondary-background);
+  color: var(--pico-secondary-inverse);
+  border-radius: 999px;
+  padding: 0.1em 0.5em;
+  font-size: 0.8em;
+  margin: 0.1em 0.15em 0.1em 0;
+  white-space: nowrap;
+}
+
+.vote-passed {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.vote-failed {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+/* --- Contact grid (legislator page) --- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* --- Results cards (lookup page) --- */
+#results-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #legislators-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+
+  #results-cards {
+    grid-template-columns: 1fr;
+  }
+}
