@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+.env
+.DS_Store
+CLAUDE.md
+docs/superpowers/
+*.egg-info/
