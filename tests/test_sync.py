@@ -81,31 +81,6 @@ SAMPLE_LEGISLATORS_PAGE_1 = {
     "pagination": {"total_pages": 1, "page": 1},
 }
 
-SAMPLE_COMMITTEE_LIST = {
-    "results": [
-        {
-            "id": "ocd-organization/comm-0001",
-            "name": "Judiciary",
-            "classification": "committee",
-            "parent": {"classification": "lower"},
-        }
-    ],
-    "pagination": {"total_pages": 1, "page": 1},
-}
-
-SAMPLE_COMMITTEE_DETAIL = {
-    "id": "ocd-organization/comm-0001",
-    "name": "Judiciary",
-    "classification": "committee",
-    "parent": {"classification": "lower"},
-    "memberships": [
-        {
-            "person": {"id": "ocd-person/aaaa-1111", "name": "Jane Smith"},
-            "role": "chair",
-        }
-    ],
-}
-
 SAMPLE_BILL_PAGE_1 = {
     "results": [
         {
@@ -385,26 +360,23 @@ class TestWriteYaml(unittest.TestCase):
 # ---------------------------------------------------------------------------
 
 class TestFetchCommittees(unittest.TestCase):
-    """Verify fetch_committees returns proper schema including member list."""
+    """Verify fetch_committees returns an empty list (API stub)."""
 
-    @patch("scripts.sync.openstates_get")
-    def test_committee_fields(self, mock_get):
-        """fetch_committees should return name, chamber, and members."""
-        # First call → list; subsequent calls → detail for each committee
-        mock_get.side_effect = [
-            SAMPLE_COMMITTEE_LIST,
-            SAMPLE_COMMITTEE_DETAIL,
-        ]
+    def test_returns_empty_list(self):
+        """fetch_committees should return [] without making any API calls.
 
+        Full committee sync is deferred to a LegiScan-based implementation.
+        """
         result = fetch_committees("lower")
+        self.assertEqual(result, [])
 
-        self.assertEqual(len(result), 1)
-        comm = result[0]
-        self.assertEqual(comm["name"], "Judiciary")
-        self.assertEqual(comm["chamber"], "house")
-        self.assertEqual(len(comm["members"]), 1)
-        self.assertEqual(comm["members"][0]["id"], "ocd-person/aaaa-1111")
-        self.assertEqual(comm["members"][0]["role"], "chair")
+    def test_returns_empty_list_for_upper(self):
+        result = fetch_committees("upper")
+        self.assertEqual(result, [])
+
+    def test_returns_empty_list_for_legislature(self):
+        result = fetch_committees("legislature")
+        self.assertEqual(result, [])
 
 
 if __name__ == "__main__":

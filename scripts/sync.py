@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import os
 import sys
+import time
 from pathlib import Path
 from typing import Any
 
@@ -60,12 +61,17 @@ def _social_handle(ids: dict, key: str) -> str | None:
 # Core HTTP
 # ---------------------------------------------------------------------------
 
-def openstates_get(endpoint: str, params: dict | None = None) -> dict:
+def openstates_get(
+    endpoint: str,
+    params: dict | list[tuple[str, Any]] | None = None,
+) -> dict:
     """Authenticated GET to https://v3.openstates.org.
 
     Args:
         endpoint: Path starting with '/', e.g. '/people'.
-        params:   Query parameters dict (optional).
+        params:   Query parameters as a dict or list of (key, value) tuples.
+                  Use a list of tuples when the same key must appear multiple
+                  times (e.g. ``[('include', 'sponsorships'), ('include', 'votes')]``).
 
     Returns:
         Parsed JSON response as a dict.
@@ -80,7 +86,19 @@ def openstates_get(endpoint: str, params: dict | None = None) -> dict:
 
     url = _BASE_URL.rstrip("/") + "/" + endpoint.lstrip("/")
     headers = {"X-API-KEY": api_key}
-    resp = requests.get(url, headers=headers, params=params or {})
+
+    # Retry up to 5 times on 429 rate-limit responses with exponential back-off.
+    for attempt in range(5):
+        resp = requests.get(url, headers=headers, params=params or {})
+        if resp.status_code == 429:
+            wait = 2 ** attempt * 5  # 5s, 10s, 20s, 40s, 80s
+            print(f"  rate-limited, waiting {wait}s before retry…")
+            time.sleep(wait)
+            continue
+        resp.raise_for_status()
+        return resp.json()
+
+    # Final attempt — raise if still rate-limited
     resp.raise_for_status()
     return resp.json()
 
@@ -102,18 +120,18 @@ def fetch_legislators(classification: str) -> list[dict]:
         data = openstates_get(
             "/people",
             params={
-                "jurisdiction": "co",
+                "jurisdiction": "Colorado",
                 "org_classification": classification,
-                "include": "other_identifiers,links,offices",
+                "include": "links",
                 "page": page,
-                "per_page": 100,
+                "per_page": 50,
             },
         )
         for person in data.get("results", []):
             legislators.append(_map_person(person, classification))
 
         pagination = data.get("pagination", {})
-        if page >= pagination.get("total_pages", 1):
+        if page >= pagination.get("max_page", 1):
             break
         page += 1
 
@@ -190,40 +208,18 @@ def _map_person(person: dict, classification: str) -> dict:
 # ---------------------------------------------------------------------------
 
 def fetch_committees(classification: str) -> list[dict]:
-    """Fetch committees for *classification* ('upper', 'lower', or 'legislature').
+    """Return an empty committee list.
 
-    Fetches the committee list, then pulls individual committee details for
-    member rosters.
-
-    Returns a list of dicts with name, chamber, and members fields.
+    The OpenStates /committees endpoint returns thousands of historical records
+    and requires per-committee detail calls, making it impractical for bulk sync.
+    Committee assignments will be added in a future update using LegiScan
+    datasets, which include current committee rosters.
     """
-    committees: list[dict] = []
-    page = 1
-
-    # For joint committees the org is "legislature"
-    org_class = classification if classification == "legislature" else classification
-
-    while True:
-        data = openstates_get(
-            "/committees",
-            params={
-                "jurisdiction": "co",
-                "classification": "committee",
-                "org_classification": org_class,
-                "page": page,
-                "per_page": 100,
-            },
-        )
-        for raw in data.get("results", []):
-            detail = openstates_get(f"/committees/{raw['id']}")
-            committees.append(_map_committee(detail))
-
-        pagination = data.get("pagination", {})
-        if page >= pagination.get("total_pages", 1):
-            break
-        page += 1
-
-    return committees
+    print(
+        f"  NOTE: committee sync skipped for '{classification}' — "
+        "will be added via LegiScan datasets in a future update."
+    )
+    return []
 
 
 def _map_committee(detail: dict) -> dict:
@@ -293,28 +289,45 @@ def fetch_bills(session: str) -> list[dict]:
     Includes sponsorships and votes.
 
     Returns a list of dicts matching the project bill schema.
+
+    Note: OpenStates Colorado session identifiers use a trailing 'A'
+    (e.g. '2025A', '2026A').  Plain year strings return zero results.
+    The ``include`` parameter must be repeated as separate values — the API
+    does not accept comma-separated lists.
     """
+    # Map plain year to the OpenStates session identifier
+    _SESSION_MAP = {
+        "2025": "2025A",
+        "2026": "2026A",
+        "2024": "2024A",
+        "2023": "2023A",
+    }
+    os_session = _SESSION_MAP.get(session, session)
+
     bills: list[dict] = []
     page = 1
 
     while True:
-        data = openstates_get(
-            "/bills",
-            params={
-                "jurisdiction": "co",
-                "session": session,
-                "include": "sponsorships,votes",
-                "page": page,
-                "per_page": 100,
-            },
-        )
+        # Use a list of tuples so 'include' can appear multiple times.
+        # The /bills endpoint caps per_page at 20.
+        params: list[tuple[str, Any]] = [
+            ("jurisdiction", "Colorado"),
+            ("session", os_session),
+            ("include", "sponsorships"),
+            ("include", "votes"),
+            ("page", page),
+            ("per_page", 20),
+        ]
+        data = openstates_get("/bills", params=params)
         for raw in data.get("results", []):
             bills.append(_map_bill(raw))
 
         pagination = data.get("pagination", {})
-        if page >= pagination.get("total_pages", 1):
+        if page >= pagination.get("max_page", 1):
             break
         page += 1
+        # Brief pause to avoid rate-limiting on multi-page bill fetches
+        time.sleep(1)
 
     return bills
 
@@ -440,24 +453,14 @@ def sync_all() -> None:
     print(f"  {len(house)} representatives")
 
     # --- Committees ---
-    print("Fetching senate committees…")
+    # Committee sync is deferred — fetch_committees returns empty lists.
+    # Full committee rosters will be added via LegiScan datasets.
+    print("Fetching committees (stub — will be replaced by LegiScan data)…")
     senate_comms = fetch_committees("upper")
-    print(f"  {len(senate_comms)} senate committees")
-
-    print("Fetching house committees…")
     house_comms = fetch_committees("lower")
-    print(f"  {len(house_comms)} house committees")
-
-    print("Fetching joint committees…")
     joint_comms = fetch_committees("legislature")
-    print(f"  {len(joint_comms)} joint committees")
-
-    all_committees = senate_comms + house_comms + joint_comms
-
-    # --- Attach committees to legislators ---
-    print("Attaching committees to legislators…")
-    attach_committees_to_legislators(senate, all_committees)
-    attach_committees_to_legislators(house, all_committees)
+    all_committees: list[dict] = senate_comms + house_comms + joint_comms
+    print(f"  {len(senate_comms)} senate, {len(house_comms)} house, {len(joint_comms)} joint")
 
     # --- Write legislators ---
     write_yaml(senate, data_dir / "legislators" / "senate.yaml")

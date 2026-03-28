@@ -1,0 +1,875 @@
+- id: ocd-person/2d0d060c-6d5f-45da-a069-fe2be14547eb
+  name: Byron Pelton
+  given_name: Byron
+  family_name: Pelton
+  party: ''
+  chamber: senate
+  district: 1
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_pelton%2Cbyron-.jpg?itok=dSwGCsUR
+  website: https://leg.colorado.gov/legislators/byron-pelton
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/fce5c955-f43d-4f80-bad5-8369223bc0ea
+  name: Lisa Frizell
+  given_name: Lisa
+  family_name: Frizell
+  party: ''
+  chamber: senate
+  district: 2
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_frizell%2Clisa.jpg?itok=1nUPX3uM
+  website: https://leg.colorado.gov/legislators/lisa-frizell
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/4d753f6e-b7e3-420d-a684-e9a27f7ab27b
+  name: Nick Hinrichsen
+  given_name: Nick
+  family_name: Hinrichsen
+  party: ''
+  chamber: senate
+  district: 3
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_hinrichsen%2Cnick.jpg?itok=dwNkn_3k
+  website: https://leg.colorado.gov/legislators/nick-hinrichsen
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/b4002b84-79a0-481a-94a8-00136c2dabb6
+  name: Mark Baisley
+  given_name: Mark
+  family_name: Baisley
+  party: ''
+  chamber: senate
+  district: 4
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_baisley%2Cmark.jpg?itok=_MDPUMlG
+  website: https://leg.colorado.gov/legislators/mark-baisley
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/c0cfa7d3-2c5e-4b68-8692-2e1b6f1b3372
+  name: Marc Catlin
+  given_name: Marc
+  family_name: Catlin
+  party: ''
+  chamber: senate
+  district: 5
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_catlin%2Cmarc.jpg?itok=H8c5qcvv
+  website: https://leg.colorado.gov/legislators/marc-catlin
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/715df6f2-cef6-4b88-b745-0207c8ffb4ff
+  name: Cleave Simpson
+  given_name: Cleave
+  family_name: Simpson
+  party: ''
+  chamber: senate
+  district: 6
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_simpson%2Ccleave.jpg?itok=tY6QiPQW
+  website: https://leg.colorado.gov/legislators/cleave-simpson
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/2372415a-2aea-4423-8a3a-bed2d40493a6
+  name: Janice Rich
+  given_name: Janice
+  family_name: Rich
+  party: ''
+  chamber: senate
+  district: 7
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_rich%2Cjanice-.jpg?itok=2ZTgyDv7
+  website: https://leg.colorado.gov/legislators/janice-rich
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/4be512fb-5ebc-422c-a858-d250cb5568ad
+  name: Dylan Roberts
+  given_name: Dylan
+  family_name: Roberts
+  party: ''
+  chamber: senate
+  district: 8
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_roberts%2Cdylan.jpg?itok=reORJBqi
+  website: https://leg.colorado.gov/legislators/dylan-roberts
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/e5055578-02cb-435c-9fe0-b877318e3b1b
+  name: Lynda Zamora Wilson
+  given_name: Lynda
+  family_name: Zamora Wilson
+  party: ''
+  chamber: senate
+  district: 9
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: ''
+  website: https://leg.colorado.gov/legislators/lynda-zamora-wilson
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/c9fd6b10-91a3-44ec-ac6a-48f73eee3ed1
+  name: Larry Liston
+  given_name: Larry
+  family_name: Liston
+  party: ''
+  chamber: senate
+  district: 10
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_liston%2Clarry.jpg?itok=iMiSIx7h
+  website: https://leg.colorado.gov/legislators/larry-liston
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/473bd095-778d-4418-8e61-96a2b8005c8e
+  name: Tony Exum
+  given_name: Tony
+  family_name: Exum
+  party: ''
+  chamber: senate
+  district: 11
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_exum%2Ctony%20sr.jpg?itok=NGfbn-0x
+  website: https://leg.colorado.gov/legislators/tony-exum
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/5dbb7ac2-a4c8-42b8-bfb1-1b012737fa74
+  name: Marc Snyder
+  given_name: Marc
+  family_name: Snyder
+  party: ''
+  chamber: senate
+  district: 12
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_snyder%2C%20marc.jpg?itok=H0ekSgX2
+  website: https://leg.colorado.gov/legislators/marc-snyder
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/fb530f21-a08e-473c-b215-9a4de6a86ee9
+  name: Scott Bright
+  given_name: Scott
+  family_name: Bright
+  party: ''
+  chamber: senate
+  district: 13
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/ScottBright.jpg
+  website: https://leg.colorado.gov/legislators/scott-bright
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/0ddf3b75-c450-419e-8235-553157770e49
+  name: Cathy Kipp
+  given_name: Cathy
+  family_name: Kipp
+  party: ''
+  chamber: senate
+  district: 14
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_kipp%2Ccathy-.jpg?itok=5TZvGZWf
+  website: https://leg.colorado.gov/legislators/cathy-kipp
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/2718c918-a38c-49c2-a120-5503164f959f
+  name: Janice Marchman
+  given_name: Janice
+  family_name: Marchman
+  party: ''
+  chamber: senate
+  district: 15
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_marchman%2Cjanice.jpg?itok=Of-P3JI-
+  website: https://leg.colorado.gov/legislators/janice-marchman
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/f72691ec-a5a0-413b-a344-e452009551a2
+  name: Chris Kolker
+  given_name: Chris
+  family_name: Kolker
+  party: ''
+  chamber: senate
+  district: 16
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_kolker%2Cchris.jpg?itok=DVQOTDRw
+  website: https://leg.colorado.gov/legislators/chris-kolker
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/f0fa561d-39cf-48f3-ae8c-84b4d30d2662
+  name: Katie Wallace
+  given_name: Katie
+  family_name: Wallace
+  party: ''
+  chamber: senate
+  district: 17
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: ''
+  website: https://leg.colorado.gov/legislators/katie-wallace
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/829879ea-a9a3-42b6-8f5f-d209b1cc961d
+  name: Judy Amabile
+  given_name: Judy
+  family_name: Amabile
+  party: ''
+  chamber: senate
+  district: 18
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_amabile%2Cjudy.jpg?itok=7ZbVKo7E
+  website: https://leg.colorado.gov/legislators/judy-amabile
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/2de0a3a1-a1e3-477f-88b9-3212fa52fb9c
+  name: Lindsey Daugherty
+  given_name: Lindsey
+  family_name: Daugherty
+  party: ''
+  chamber: senate
+  district: 19
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_daugherty%2Clindsey.jpg?itok=27KHw-jU
+  website: https://leg.colorado.gov/legislators/lindsey-daugherty
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/5226ebdd-0710-49da-b446-61fac19765ce
+  name: Lisa Cutter
+  given_name: Lisa
+  family_name: Cutter
+  party: ''
+  chamber: senate
+  district: 20
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_cutter%2Clisa.jpg?itok=9pY76BLB
+  website: https://leg.colorado.gov/legislators/lisa-cutter
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/a033ad21-bdb7-4af2-be2e-e21c3e4cfa24
+  name: Adrienne Benavidez
+  given_name: Adrienne
+  family_name: Benavidez
+  party: ''
+  chamber: senate
+  district: 21
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2022a_benazidez%2C%20adrienne.jpg?itok=NFYm4lLx
+  website: http://leg.colorado.gov/legislators/adrienne-benavidez
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/c06af980-c553-4f79-a39d-295b7226f029
+  name: Jessie Danielson
+  given_name: Jessie
+  family_name: Danielson
+  party: ''
+  chamber: senate
+  district: 22
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_danielson%2Cjessie.jpg?itok=PNVRiYDq
+  website: https://leg.colorado.gov/legislators/jessie-danielson
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/6d1fcaf0-ed3d-4772-876f-09dc5e931556
+  name: Barbara Kirkmeyer
+  given_name: Barbara
+  family_name: Kirkmeyer
+  party: ''
+  chamber: senate
+  district: 23
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_kirkmeyer%2Cbarb-.jpg?itok=0RWY0AqY
+  website: https://leg.colorado.gov/legislators/barbara-kirkmeyer
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/ebf0c3de-2f58-436f-af67-12863f9cb552
+  name: Kyle Mullica
+  given_name: Kyle
+  family_name: Mullica
+  party: ''
+  chamber: senate
+  district: 24
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_mullica%2Ckyle.jpg?itok=8ek9BxJC
+  website: https://leg.colorado.gov/legislators/kyle-mullica
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/dbe86f29-2ecb-449e-aaf6-3fc91baf2e0e
+  name: William Lindstedt
+  given_name: William
+  family_name: Lindstedt
+  party: ''
+  chamber: senate
+  district: 25
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_lindstedt%2Cwilliam.jpg?itok=UVhLAS88
+  website: https://leg.colorado.gov/legislators/william-lindstedt
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/c2cade07-9c95-4439-938c-77ac4ed44fab
+  name: Jeff Bridges
+  given_name: Jeff
+  family_name: Bridges
+  party: ''
+  chamber: senate
+  district: 26
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_bridges%2Cjeff.jpg?itok=7ZsoC6-F
+  website: https://leg.colorado.gov/legislators/jeff-bridges
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/dc9056b8-fb9c-4a66-99b8-210acce64bff
+  name: Tom Sullivan
+  given_name: Tom
+  family_name: Sullivan
+  party: ''
+  chamber: senate
+  district: 27
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_sullivan%2Ctom.jpg?itok=rbln5IBq
+  website: https://leg.colorado.gov/legislators/tom-sullivan
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/b680cb39-442c-4dd2-81bd-88696cfe9df2
+  name: Mike Weissman
+  given_name: Mike
+  family_name: Weissman
+  party: ''
+  chamber: senate
+  district: 28
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_weissman%2Cmike.jpg?itok=7RFIpBao
+  website: https://leg.colorado.gov/legislators/mike-weissman
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/506f18ea-3611-408b-aa0e-73adf9681efe
+  name: Iman Jodeh
+  given_name: Iman
+  family_name: Jodeh
+  party: ''
+  chamber: senate
+  district: 29
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_jodeh%2C%20iman.jpg?itok=rVcBxpYT
+  website: https://leg.colorado.gov/legislators/iman-jodeh
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/8e95ac06-ddbb-4f6c-ba7e-854a92860be4
+  name: John Carson
+  given_name: John
+  family_name: Carson
+  party: ''
+  chamber: senate
+  district: 30
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: https://i0.wp.com/coloradocommunitymedia.com/wp-content/uploads/2024/06/DCO-0613-Commissioner-D3-race-2.jpg?w=768&ssl=1
+  website: https://leg.colorado.gov/legislators/john-carson
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/4a72c7ee-c3e5-4c61-8e79-3301cb70a599
+  name: Matt Ball
+  given_name: Matt
+  family_name: Ball
+  party: ''
+  chamber: senate
+  district: 31
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: https://images.squarespace-cdn.com/content/67330255adbf4c1a48d665b3/1732088535559-59YBHTFEFBLWVIPHRMDL/Matt+Ball+Headshot_park.jpeg?content-type=image%2Fjpeg
+  website: https://leg.colorado.gov/legislators/matt-ball
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/ab377224-ab70-4c20-a535-baa429520e7c
+  name: Robert Rodriguez
+  given_name: Robert
+  family_name: Rodriguez
+  party: ''
+  chamber: senate
+  district: 32
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_rodriguez%2Crobert.jpg?itok=n2lsSdht
+  website: https://leg.colorado.gov/legislators/robert-rodriguez
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/e4e1f1a9-7134-4d90-9fed-2aa7a0e3a307
+  name: James Coleman
+  given_name: James
+  family_name: Coleman
+  party: ''
+  chamber: senate
+  district: 33
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_coleman%2Cjames.jpg?itok=U8FI_CeH
+  website: https://leg.colorado.gov/legislators/james-coleman
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/8dae5ba5-6741-4aca-8c1e-24f014fda187
+  name: Julie Gonzales
+  given_name: Julie
+  family_name: Gonzales
+  party: ''
+  chamber: senate
+  district: 34
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_gonzales%2Cjulie.jpg?itok=YD-7SxZl
+  website: https://leg.colorado.gov/legislators/julie-gonzales
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
+- id: ocd-person/45cd06eb-9967-4468-9e4e-677549e7638d
+  name: Rod Pelton
+  given_name: Rod
+  family_name: Pelton
+  party: ''
+  chamber: senate
+  district: 35
+  term_start: ''
+  term_end: ''
+  bio: ''
+  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_pelton%2C%20rod.jpg?itok=UiBGO0En
+  website: https://leg.colorado.gov/legislators/rod-pelton
+  contact:
+    capitol:
+      address: ''
+      phone: ''
+    district:
+      address: ''
+      phone: ''
+  social:
+    twitter: null
+    facebook: null
+    instagram: null
+    youtube: null
+  committees: []
