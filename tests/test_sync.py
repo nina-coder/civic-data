@@ -315,8 +315,8 @@ class TestFetchBills(unittest.TestCase):
         self.assertEqual(v["date"], "2026-02-15")
         self.assertEqual(v["chamber"], "house")   # lower → house
         self.assertTrue(v["passed"])
-        self.assertEqual(v["yes"], 40)
-        self.assertEqual(v["no"], 25)
+        self.assertEqual(v["yes"], 1)
+        self.assertEqual(v["no"], 0)
         self.assertEqual(v["roll_call"][0]["id"], "ocd-person/aaaa-1111")
         self.assertEqual(v["roll_call"][0]["vote"], "yes")
 

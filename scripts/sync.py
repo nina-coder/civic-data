@@ -357,7 +357,6 @@ def _map_bill(raw: dict) -> dict:
     # Votes
     votes = []
     for v in raw.get("votes", []):
-        counts = {c["option"]: c["value"] for c in v.get("counts", [])}
         chamber_raw = v.get("organization_classification", "")
         passed = v.get("result", "").lower() in ("pass", "passed")
         roll_call = [
@@ -372,8 +371,8 @@ def _map_bill(raw: dict) -> dict:
                 "date": v.get("start_date", ""),
                 "chamber": _chamber(chamber_raw),
                 "passed": passed,
-                "yes": counts.get("yes", 0),
-                "no": counts.get("no", 0),
+                "yes": sum(1 for rc in roll_call if rc["vote"] == "yes"),
+                "no": sum(1 for rc in roll_call if rc["vote"] == "no"),
                 "roll_call": roll_call,
             }
         )
