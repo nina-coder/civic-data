@@ -8,7 +8,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_mabrey%2Cjavier-.jpg?itok=nfzx9teU
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeGhUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d5786817bd26f7bddab7f2d1085068af877cdf48/Mabrey,%20Javier.jpg
   website: https://leg.colorado.gov/legislators/javier-mabrey
   contact:
     capitol:
@@ -33,7 +33,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_woodrow%2Csteven-.jpg?itok=s0Qxv3Oj
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMXhUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b28a2d8e234c37d646a99efd0b7aea44a198fe9d/Woodrow,Steven-.jpg
   website: https://leg.colorado.gov/legislators/steven-woodrow
   contact:
     capitol:
@@ -58,7 +58,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_froelich%2Cmeg.jpg?itok=YaGZpLnx
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeUpUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--2f6a935d21bc9d78189accacc0743c3071e567a1/Froelich,%20Meg.jpg
   website: https://leg.colorado.gov/legislators/meg-froelich
   contact:
     capitol:
@@ -108,7 +108,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_valdez%2Calex.jpg?itok=NsEe2BaG
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMU5UQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d081dee839aa2f1b43bce42882d1b5e679141a05/Valdez,%20Alex.jpg
   website: https://leg.colorado.gov/legislators/alex-valdez
   contact:
     capitol:
@@ -158,7 +158,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_bacon%2Cjennifer.jpg?itok=IifAHPYj
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeXhUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--9cf98fe8dc3d759fedb356430b801c66ad2b1edd/Bacon,%20Jennifer.jpg
   website: https://leg.colorado.gov/legislators/jennifer-bacon
   contact:
     capitol:
@@ -208,7 +208,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_sirota%2Cemily.jpg?itok=lU6YsziF
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeTVUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--14b86aa8d8dc84d49199d71d5ad732b0abe8eb38/Sirota,%20Emily.jpg
   website: https://leg.colorado.gov/legislators/emily-sirota
   contact:
     capitol:
@@ -233,7 +233,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_joseph%2Cjunie.jpg?itok=Lx4YgUSv
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeWRUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--c05fd8101f2bb8458f9e92fcaac1e5d867b1b662/Joseph,Junie.jpg
   website: https://leg.colorado.gov/legislators/junie-joseph
   contact:
     capitol:
@@ -258,7 +258,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_mccormick%2Ckaren.jpg?itok=b2GRKW9h
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMkJUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e6c90c7865f8557c6411c91a27f58280cf938f05/McCormick,%20Karen.jpg
   website: https://leg.colorado.gov/legislators/karen-mccormick
   contact:
     capitol:
@@ -283,7 +283,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_kyle%20brown.jpg?itok=wfdtmHtz
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMEZUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--4dbbcef24e21979fc4a8cd74bea005733c789d61/Brown,%20Kyle.jpg
   website: https://leg.colorado.gov/legislators/kyle-brown
   contact:
     capitol:
@@ -308,7 +308,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_mccluskie%2C%20julie%20-%20speaker.jpg?itok=Gnk_5Fmt
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeEpUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--876516c8bc7b672caf43f253b83440d18b6eba1a/McCluskie,%20Julie.jpg
   website: https://leg.colorado.gov/legislators/julie-mccluskie
   contact:
     capitol:
@@ -358,7 +358,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_scott%20bottoms.jpg?itok=q9FETlLN
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMCtIQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--2fb56df7ac0ddd22f63e0eb99a03b0d30e48bff5/Rep%20Bottoms%202026.jpg
   website: https://leg.colorado.gov/legislators/scott-bottoms
   contact:
     capitol:
@@ -408,7 +408,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_english%2Cregina.jpg?itok=JnUXbH3O
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBejFUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--854752db6d6188b1f926eb9e309d7791738093e5/English,%20Regina.jpg
   website: https://leg.colorado.gov/legislators/regina-english
   contact:
     capitol:
@@ -458,7 +458,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2022a_woog%2C%20dan.jpg?itok=VCcwkzOa
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNEZUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6bf3d084b17e200e01f2ade18431e32df8e43a60/Rep%20Woog%202026.jpg
   website: https://leg.colorado.gov/legislators/dan-woog
   contact:
     capitol:
@@ -508,7 +508,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_bradfield%2Cmary.jpg?itok=QsKqEtTp
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMXRUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e23010a39e960f0ad905ba4df19c5be9cf9ea5b9/Bradfield,Mary.jpg
   website: https://leg.colorado.gov/legislators/mary-bradfield
   contact:
     capitol:
@@ -533,7 +533,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_degraaf%2Cken.jpg?itok=kBCJZk7B
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeUJUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--375071f2707656fb29aac1700948de56433dd649/deGraaf,%20Ken.jpg
   website: https://leg.colorado.gov/legislators/ken-degraaf
   contact:
     capitol:
@@ -558,7 +558,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_duran%2C%20monica.jpg?itok=weFukimD
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeDVUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--807d51d68890b754bbaed0298372904fcf4a75d5/Duran,%20Monica.jpg
   website: https://leg.colorado.gov/legislators/monica-duran
   contact:
     capitol:
@@ -608,7 +608,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_story%2Ctammy.jpg?itok=NP2YRnLu
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBelJUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6eaeb97b2bd0b0a9f0bf46040f34663cd0c37112/Story,%20Tammy.jpg
   website: https://leg.colorado.gov/legislators/tammy-story
   contact:
     capitol:
@@ -633,7 +633,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_lukens%2Cmeghan.jpg?itok=uumAlRsU
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBM05UQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--16c3fe74431c9197b51b11e7bd64eb387369e758/Lukens,%20Meghan.jpg
   website: https://leg.colorado.gov/legislators/meghan-lukens
   contact:
     capitol:
@@ -658,7 +658,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_titone%2Cbrianna.jpg?itok=uJAlJK9O
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeUZUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ee1a1cad1906ee93f20ffecfca5d9444e525ac05/Titone,%20Brianna.jpg
   website: https://leg.colorado.gov/legislators/brianna-titone
   contact:
     capitol:
@@ -683,7 +683,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_lieder%2Csheila.jpg?itok=eytxsbcE
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeE5UQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bbb6f4456c06c54b1c8fffade0441c9a63ccf12e/Lieder,%20Sheila.jpg
   website: https://leg.colorado.gov/legislators/sheila-lieder
   contact:
     capitol:
@@ -783,7 +783,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_rep%20rutinel%20v2.png?itok=m5Xp301H
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBelZUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ef4c74094f42d481f610cc35459aa4ca3a78b6eb/Rutinel,%20Manny.jpg
   website: https://leg.colorado.gov/legislators/manny-rutinel
   contact:
     capitol:
@@ -833,7 +833,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_willford%2Cjenny.jpg?itok=ydfmMYJj
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBM0pUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1d5d85081063604c97df120526af629e099e84e1/Willford,%20Jenny.jpg
   website: https://leg.colorado.gov/legislators/jenny-willford
   contact:
     capitol:
@@ -858,7 +858,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_garcia%2Clorena.jpg?itok=AB_Ecmz-
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMVZUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--000f403a3a00241cbcadbe814acab9558e10dde4/Garcia,%20Lorena.jpg
   website: https://leg.colorado.gov/legislators/lorena-garcia
   contact:
     capitol:
@@ -958,7 +958,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_bradley%2Cbrandi.jpg?itok=gkSqfLu8
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMnhUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f00bc156e1af4f5ddf1b991b5f96817a5221767c/Bradley,%20Brandi.jpg
   website: https://leg.colorado.gov/legislators/brandi-bradley
   contact:
     capitol:
@@ -983,7 +983,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_ricks%2Cnaquetta-.jpg?itok=ZtahH919
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMjlUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6ad9235336da0cb9a035f6bb879b11838db6749e/Ricks,%20Naquetta.jpg
   website: https://leg.colorado.gov/legislators/naquetta-ricks
   contact:
     capitol:
@@ -1033,7 +1033,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_lindsay%2Cmandy.jpg?itok=FHjKFjNG
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeFpUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--16f693f706022e86e268da5a37a9a93ff4aef1ba/Lindsay,%20Mandy.jpg
   website: https://leg.colorado.gov/legislators/mandy-lindsay
   contact:
     capitol:
@@ -1058,7 +1058,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_marshall%2C%20bob.jpg?itok=5ohSNQXK
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBM1pUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--18c815634a34450ae6caf0855eeb0406ea4582cc/Marshall,%20Bob.jpg
   website: https://leg.colorado.gov/legislators/bob-marshall
   contact:
     capitol:
@@ -1083,7 +1083,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_hartsook%2Canthony.jpg?itok=jDCFtuOk
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeVpUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--500af1f4202491ae4bd34d7f8e8196708b8f0019/Hartsook,Anthony.jpg
   website: https://leg.colorado.gov/legislators/anthony-hartsook
   contact:
     capitol:
@@ -1133,7 +1133,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_t%20mauro.jpg?itok=05-hhChK
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMlJUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--c083d9d0c61aec511c97d0802cd5873416f901d9/Mauro,%20Tisha.jpg
   website: https://leg.colorado.gov/legislators/tisha-mauro
   contact:
     capitol:
@@ -1158,7 +1158,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_winter%2Cty.jpg?itok=aGQTR3tx
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMmRUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--7e3263a1638a76c8a5732293d1ea8f844d2e9d25/Winter,Ty.jpg
   website: https://leg.colorado.gov/legislators/ty-winter
   contact:
     capitol:
@@ -1258,7 +1258,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_rep%20ron%20weinberg.jpg?itok=7Z-RCYNp
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBekpUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ff0c3a27e8b7c137cbdb5c5fde02af093a8db4b4/Rep%20Ron%20Weinberg.JPG
   website: https://leg.colorado.gov/legislators/ron-weinberg
   contact:
     capitol:
@@ -1308,7 +1308,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_boesenecker%2Candrew.jpg?itok=3jMO1y9L
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMGhUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--cfaae02348bca597a92a30ada0c08d3e68ecc93f/Boesenecker,%20Andrew.jpg
   website: https://leg.colorado.gov/legislators/andrew-boesenecker
   contact:
     capitol:
@@ -1333,7 +1333,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_soper%2C%20matt.jpg?itok=n4TTkQb0
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOVdUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--767a7057ff5fd758ce0cbddae6aa4c7b1ef907f2/Soper,%20Matthew.jpg
   website: https://leg.colorado.gov/legislators/matt-soper
   contact:
     capitol:
@@ -1358,7 +1358,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_taggartrick.jpg?itok=nCWfv2vG
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBd3BUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6b1fb5526e7780f89f9b2fb79535d4e7c39fc37b/TaggartRick.jpg
   website: https://leg.colorado.gov/legislators/rick-taggart
   contact:
     capitol:
@@ -1408,7 +1408,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_velasco%2Celizabeth.jpg?itok=y0rtvQsw
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNTltQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1fae82b072c31f28dbf73e893d992426893562a5/Velasco,%20Elizabeth.jpg
   website: https://leg.colorado.gov/legislators/elizabeth-velasco
   contact:
     capitol:
@@ -1483,7 +1483,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_luck%2C%20stephanie.jpg?itok=b1DCrqcw
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdzVUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--30a0b950ff1755b8691052388ed9b70f8fe688cc/Luck,%20Stephanie.jpg
   website: https://leg.colorado.gov/legislators/stephanie-luck
   contact:
     capitol:
@@ -1508,7 +1508,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_hamrick%2Celiza-.jpg?itok=x__dbth_
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBd3RUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--291f32764a20e23b89e6ea44560dea6151853b61/Hamrick,Eliza-.jpg
   website: https://leg.colorado.gov/legislators/eliza-hamrick
   contact:
     capitol:
@@ -1533,7 +1533,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: http://leg.colorado.gov/sites/default/files/styles/width_300/public/2023b_martinez%2Cmatthew.jpg?itok=JOH2bZF1
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeEJUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--4743a8832adf9daea6fe22f97942afef67ab8d1a/Martinez,%20Matthew.jpg
   website: https://leg.colorado.gov/legislators/matthew-martinez
   contact:
     capitol:
