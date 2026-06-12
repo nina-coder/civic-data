@@ -17,12 +17,57 @@ from typing import Any
 import requests
 import yaml
 from dotenv import load_dotenv
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 # Load .env from repo root (two levels up from this file)
 _REPO_ROOT = Path(__file__).parent.parent
 load_dotenv(_REPO_ROOT / ".env")
 
 _BASE_URL = "https://v3.openstates.org"
+
+# ---------------------------------------------------------------------------
+# HTTP session with retry/back-off
+# ---------------------------------------------------------------------------
+#
+# The OpenStates gateway intermittently returns 502/503/504 during weekly
+# syncs (e.g. runs on 2026-05-24 and 2026-06-07 both died on a single
+# un-retried gateway error). We mount a urllib3 Retry adapter so transient
+# gateway and connection errors are survived instead of crashing the run.
+#
+#   - retry on 429 (rate limit) and 502/503/504 (gateway), plus connection
+#     and read errors (handled by Retry's connect/read counters)
+#   - 5 retries total
+#   - exponential back-off with jitter: ~5s, 10s, 20s, 40s, 80s, capped at
+#     120s (backoff_jitter spreads each wait so retries don't sync up)
+#   - respect Retry-After when the server sends it
+
+_RETRY = Retry(
+    total=5,
+    connect=5,
+    read=5,
+    status=5,
+    status_forcelist=(429, 500, 502, 503, 504),
+    allowed_methods=frozenset(["GET"]),
+    backoff_factor=5,          # 5s base -> 5, 10, 20, 40, 80 ...
+    backoff_jitter=2.5,        # add 0..2.5s of random jitter per wait
+    backoff_max=120,           # hard cap per wait
+    respect_retry_after_header=True,
+    raise_on_status=False,     # let us call raise_for_status() ourselves
+)
+
+
+def _make_session() -> requests.Session:
+    """Return a requests Session with the gateway-retry adapter mounted."""
+    session = requests.Session()
+    adapter = HTTPAdapter(max_retries=_RETRY)
+    session.mount("https://", adapter)
+    session.mount("http://", adapter)
+    return session
+
+
+_SESSION = _make_session()
+
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -67,6 +112,11 @@ def openstates_get(
 ) -> dict:
     """Authenticated GET to https://v3.openstates.org.
 
+    Transient gateway errors (429/500/502/503/504) and connection/read errors
+    are retried automatically by the session's Retry adapter (5 retries,
+    exponential back-off with jitter capped at 120s). Only a persistent
+    failure after all retries raises.
+
     Args:
         endpoint: Path starting with '/', e.g. '/people'.
         params:   Query parameters as a dict or list of (key, value) tuples.
@@ -77,7 +127,8 @@ def openstates_get(
         Parsed JSON response as a dict.
 
     Raises:
-        requests.HTTPError on non-2xx responses.
+        requests.HTTPError on non-2xx responses that survive all retries.
+        requests.RequestException on connection errors that survive all retries.
         RuntimeError if OPENSTATES_API_KEY is not set.
     """
     api_key = os.environ.get("OPENSTATES_API_KEY")
@@ -87,18 +138,7 @@ def openstates_get(
     url = _BASE_URL.rstrip("/") + "/" + endpoint.lstrip("/")
     headers = {"X-API-KEY": api_key}
 
-    # Retry up to 5 times on 429 rate-limit responses with exponential back-off.
-    for attempt in range(5):
-        resp = requests.get(url, headers=headers, params=params or {})
-        if resp.status_code == 429:
-            wait = 2 ** attempt * 5  # 5s, 10s, 20s, 40s, 80s
-            print(f"  rate-limited, waiting {wait}s before retry…")
-            time.sleep(wait)
-            continue
-        resp.raise_for_status()
-        return resp.json()
-
-    # Final attempt — raise if still rate-limited
+    resp = _SESSION.get(url, headers=headers, params=params or {}, timeout=30)
     resp.raise_for_status()
     return resp.json()
 
