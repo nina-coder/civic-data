@@ -333,7 +333,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: ''
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNEJUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5304bfc622fea842363e0fa2e5cbcb23d63aa5cf/Rep%20Flanell.jpeg
   website: https://leg.colorado.gov/legislators/ava-flanell
   contact:
     capitol:
@@ -708,7 +708,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: ''
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOHhTQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--c9f2d149165dbada9f3390e8d08ed879dc90f881/Goldstein,-Lori.jpg
   website: https://leg.colorado.gov/legislators/lori-goldstein
   contact:
     capitol:
@@ -773,18 +773,18 @@
     instagram: null
     youtube: null
   committees: []
-- id: ocd-person/ce4bd827-c1bc-4736-a580-f4f0215e727d
-  name: Manny Rutinel
-  given_name: Manny
-  family_name: Rutinel
+- id: ocd-person/135499ed-a471-4567-afcc-53c16112f0d6
+  name: María González
+  given_name: María
+  family_name: González
   party: Democratic
   chamber: house
   district: 32
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBelZUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ef4c74094f42d481f610cc35459aa4ca3a78b6eb/Rutinel,%20Manny.jpg
-  website: https://leg.colorado.gov/legislators/manny-rutinel
+  photo_url: https://images.squarespace-cdn.com/content/v1/5d1a28b95422a10001b1aada/1649269619359-0E7ARKVM3YXNYITKRFNP/Maria+Gonzalez.jpg?format=500w
+  website: ''
   contact:
     capitol:
       address: ''
@@ -808,7 +808,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: ''
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBd2hWQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f9b1ecc716972f212d3b5fa44d7984f6a797f367/Nguyen,-Kenny.jpg
   website: https://leg.colorado.gov/legislators/kenny-nguyen
   contact:
     capitol:
@@ -908,7 +908,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: ''
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMmxUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--440e192273c07cd1802c3f80053294b1fc1466f0/Clifford,%20Chad.jpg
   website: https://leg.colorado.gov/legislators/chad-clifford
   contact:
     capitol:
@@ -1033,7 +1033,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeFpUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--16f693f706022e86e268da5a37a9a93ff4aef1ba/Lindsay,%20Mandy.jpg
+  photo_url: ''
   website: https://leg.colorado.gov/legislators/mandy-lindsay
   contact:
     capitol:
@@ -1333,7 +1333,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOVdUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--767a7057ff5fd758ce0cbddae6aa4c7b1ef907f2/Soper,%20Matthew.jpg
+  photo_url: ''
   website: https://leg.colorado.gov/legislators/matt-soper
   contact:
     capitol:
@@ -1383,7 +1383,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: https://i0.wp.com/coloradocommunitymedia.com/wp-content/uploads/2022/10/20221012-100004-Richardson20for20Facebook.jpg?resize=1200%2C782&ssl=1
+  photo_url: ''
   website: https://leg.colorado.gov/legislators/chris-richardson
   contact:
     capitol:
@@ -1433,7 +1433,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: ''
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMUpUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--4b9d44adbd15e44548363ced61b10a873a3a90db/Suckla,%20Larry%20Don.jpg
   website: https://leg.colorado.gov/legislators/larry-don-suckla
   contact:
     capitol:
@@ -1583,7 +1583,7 @@
   term_start: ''
   term_end: ''
   bio: ''
-  photo_url: ''
+  photo_url: https://leg.colorado.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMzVUQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--0e6191fb1cd75d1bcd0669b7105c3d347e0d598d/Slaugh,-Scott.jpg
   website: https://leg.colorado.gov/legislators/scott-slaugh
   contact:
     capitol:
