@@ -21,6 +21,9 @@ REQUIRED_LEGISLATOR_FIELDS = ("id", "name", "party", "chamber", "district")
 
 DATA_DIR = Path(__file__).parent.parent / "data"
 LEGISLATORS_DIR = DATA_DIR / "legislators"
+
+# Seats per chamber that may be vacant at once before the count check fails.
+MAX_VACANCIES = 3
 COMMITTEES_DIR = DATA_DIR / "committees"
 BILLS_DIR = DATA_DIR / "bills"
 
@@ -43,7 +46,8 @@ def validate_legislators(data: list, expected_count: int) -> list[str]:
     """Validate a list of legislator records.
 
     Checks:
-    - Correct number of legislators matches expected_count.
+    - Legislator count matches expected_count, allowing up to MAX_VACANCIES
+      vacant seats (warned, not failed).
     - Required fields present on every record: id, name, party, chamber, district.
     - No duplicate district numbers within a chamber.
 
@@ -51,10 +55,17 @@ def validate_legislators(data: list, expected_count: int) -> list[str]:
     """
     errors: list[str] = []
 
-    # Count check
-    if len(data) != expected_count:
+    # Count check. A seat can sit vacant between a resignation and the
+    # vacancy appointment, so a small shortfall is a warning, not a failure.
+    shortfall = expected_count - len(data)
+    if shortfall < 0 or shortfall > MAX_VACANCIES:
         errors.append(
             f"Expected {expected_count} legislators, found {len(data)}."
+        )
+    elif shortfall > 0:
+        print(
+            f"  WARN expected {expected_count} legislators, found {len(data)} "
+            f"({shortfall} vacant seat(s) assumed)."
         )
 
     # Required fields + duplicate district tracking
